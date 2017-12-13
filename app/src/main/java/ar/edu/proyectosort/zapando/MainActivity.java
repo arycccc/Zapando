@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity
         private SharedPreferences sharedPref;
         public String session;
     */
-//
+//login finish
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         //log in
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity
             startActivity(intent);
         }
         */
-        //log in
+        //login finish
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
