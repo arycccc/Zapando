@@ -15,6 +15,7 @@ import android.widget.Toast;
 import java.util.Map;
 
 public class LoginActivity extends AppCompatActivity {
+   /*
     private SharedPreferences sharedPref;
 
     final Context context = this;
@@ -191,5 +192,5 @@ public class LoginActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {}
-
+*/
 }
