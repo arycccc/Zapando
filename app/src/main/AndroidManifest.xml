@@ -45,6 +45,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="ar.edu.proyectosort.zapando.MainActivity" />
         </activity>
+        <activity android:name=".MatchActivity" />
+        <activity android:name=".PerfilActivity"></activity>
     </application>
 
 </manifest>

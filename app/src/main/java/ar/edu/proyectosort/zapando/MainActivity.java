@@ -76,11 +76,17 @@ public class MainActivity extends AppCompatActivity
             Intent intent = new Intent(this, MapsActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_matchs) {
-
+            Intent intent = new Intent(this, MatchActivity.class);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void perfil(View v){
+        Intent intent = new Intent(this, PerfilActivity.class);
+        startActivity(intent);
     }
 }
