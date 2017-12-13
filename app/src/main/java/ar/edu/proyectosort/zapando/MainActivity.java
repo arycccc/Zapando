@@ -1,6 +1,8 @@
 package ar.edu.proyectosort.zapando;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -16,9 +18,25 @@ import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+//login
+        final Context context = this;
+        final String server = "http://android.proyectosort.edu.ar";
+
+        private SharedPreferences sharedPref;
+        public String session;
+//
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //log in
+        sharedPref = getSharedPreferences("ANDROID_CLIENT", Context.MODE_PRIVATE);
+        session = sharedPref.getString("SESSION", "");
+
+        if (session.isEmpty()) {
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
+        }
+        //log in
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);

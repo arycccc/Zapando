@@ -46,7 +46,8 @@
                 android:value="ar.edu.proyectosort.zapando.MainActivity" />
         </activity>
         <activity android:name=".MatchActivity" />
-        <activity android:name=".PerfilActivity"></activity>
+        <activity android:name=".PerfilActivity" />
+        <activity android:name=".LoginActivity"></activity>
     </application>
 
 </manifest>
