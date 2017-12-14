@@ -124,4 +124,31 @@ public class MainActivity extends AppCompatActivity
         Intent intent = new Intent(this, PerfilActivity.class);
         startActivity(intent);
     }
+
+    public void like(View v){
+        Snackbar snackbar = Snackbar
+                .make(v, "LIKE", Snackbar.LENGTH_LONG);
+        snackbar.show();
+
+        VideoView videoView = (VideoView) findViewById(R.id.videoView);
+        Uri path = Uri.parse("android.resource://ar.edu.proyectosort.zapando/"
+                + R.raw.notengopito);
+        videoView.setVideoURI(path);
+        videoView.start();
+
+    }
+
+    public void dislike(View v){
+        Snackbar snackbar = Snackbar
+                .make(v, "DISLIKE", Snackbar.LENGTH_LONG);
+        snackbar.show();
+
+        VideoView videoView = (VideoView) findViewById(R.id.videoView);
+        Uri path = Uri.parse("android.resource://ar.edu.proyectosort.zapando/"
+                + R.raw.riend);
+        videoView.setVideoURI(path);
+        videoView.start();
+
+    }
+
 }
