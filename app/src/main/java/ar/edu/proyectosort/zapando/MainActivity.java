@@ -21,13 +21,13 @@ import android.widget.VideoView;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 //login
-    /*
+
         final Context context = this;
-        final String server = "http://android.proyectosort.edu.ar";
+        final String server = "http://zapando.proyectosort.edu.ar";
 
         private SharedPreferences sharedPref;
         public String session;
-    */
+
 //login finish
 
         private VideoView videoView;
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         //log in
-        /*
+
         sharedPref = getSharedPreferences("ANDROID_CLIENT", Context.MODE_PRIVATE);
         session = sharedPref.getString("SESSION", "");
 
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity
             Intent intent = new Intent(this, LoginActivity.class);
             startActivity(intent);
         }
-        */
+
         //login finish
 
         super.onCreate(savedInstanceState);

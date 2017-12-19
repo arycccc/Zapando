@@ -12,11 +12,23 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.android.volley.Cache;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.BasicNetwork;
+import com.android.volley.toolbox.DiskBasedCache;
+import com.android.volley.toolbox.HurlStack;
+import com.android.volley.toolbox.StringRequest;
+
+import java.util.HashMap;
 import java.util.Map;
 
 public class LoginActivity extends AppCompatActivity {
-   /*
+
     private SharedPreferences sharedPref;
+    private RequestQueue queue;
 
     final Context context = this;
     final String server = "http://android.proyectosort.edu.ar";
@@ -26,6 +38,9 @@ public class LoginActivity extends AppCompatActivity {
     public EditText passwordEditText;
     public EditText firstnameEditText;
     public EditText lastnameEditText;
+    public EditText birthEditText;
+    public EditText videoEditText;
+    public EditText neighborhoodEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +50,7 @@ public class LoginActivity extends AppCompatActivity {
         sharedPref = getSharedPreferences("ANDROID_CLIENT", Context.MODE_PRIVATE);
 
         Cache cache = new DiskBasedCache(getCacheDir(), 1024 * 1024);
-        Network network = new BasicNetwork(new HurlStack());
+        BasicNetwork network = new BasicNetwork(new HurlStack());
         queue = new RequestQueue(cache, network);
         queue.start();
 
@@ -121,6 +136,9 @@ public class LoginActivity extends AppCompatActivity {
         final String password = passwordEditText.getText().toString();
         final String firstname = firstnameEditText.getText().toString();
         final String lastname = lastnameEditText.getText().toString();
+        final String birth = birthEditText.getText().toString();
+        final String video = videoEditText.getText().toString();
+        final String neighborhood = neighborhoodEditText.getText().toString();
         final String url = server + "/users.php";
 
         findViewById(R.id.loading).setVisibility(View.VISIBLE);
@@ -161,6 +179,10 @@ public class LoginActivity extends AppCompatActivity {
                 params.put("password", password);
                 params.put("firstname", firstname);
                 params.put("lastname", lastname);
+                params.put("birth", birth);
+                params.put("video", video);
+                params.put("neighborhood", neighborhood);
+
                 return params;
             }
         };
@@ -192,5 +214,5 @@ public class LoginActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {}
-*/
+
 }
