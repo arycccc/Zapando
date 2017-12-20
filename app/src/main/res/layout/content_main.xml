@@ -25,12 +25,12 @@
             android:orientation="horizontal"
             tools:layout_editor_absoluteX="8dp"
             tools:layout_editor_absoluteY="8dp">
-
+<!--
             <com.google.android.youtube.player.YouTubePlayerView
                 android:layout_height="match_parent"
                 android:layout_width="wrap_content"
                 android:id="@+id/youtube_view" />
-
+-->
             <Button
                 android:id="@+id/btndislike"
                 android:layout_width="match_parent"

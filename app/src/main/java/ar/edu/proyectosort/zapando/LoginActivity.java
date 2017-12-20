@@ -31,7 +31,7 @@ public class LoginActivity extends AppCompatActivity {
     private RequestQueue queue;
 
     final Context context = this;
-    final String server = "http://android.proyectosort.edu.ar";
+    final String server = "http://zapando.proyectosort.edu.ar";
 
     public String session;
     public EditText emailEditText;
@@ -40,14 +40,13 @@ public class LoginActivity extends AppCompatActivity {
     public EditText lastnameEditText;
     public EditText birthEditText;
     public EditText videoEditText;
-    public EditText neighborhoodEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        sharedPref = getSharedPreferences("ANDROID_CLIENT", Context.MODE_PRIVATE);
+        sharedPref = getSharedPreferences("ZAPANDO", Context.MODE_PRIVATE);
 
         Cache cache = new DiskBasedCache(getCacheDir(), 1024 * 1024);
         BasicNetwork network = new BasicNetwork(new HurlStack());
@@ -120,6 +119,8 @@ public class LoginActivity extends AppCompatActivity {
                 passwordEditText = (EditText)findViewById(R.id.password);
                 firstnameEditText = (EditText)findViewById(R.id.firstname);
                 lastnameEditText = (EditText)findViewById(R.id.lastname);
+                birthEditText = (EditText)findViewById(R.id.birth);
+                videoEditText = (EditText)findViewById(R.id.video);
             }
             @Override
             public void onViewDetachedFromWindow(View v) {
@@ -138,7 +139,6 @@ public class LoginActivity extends AppCompatActivity {
         final String lastname = lastnameEditText.getText().toString();
         final String birth = birthEditText.getText().toString();
         final String video = videoEditText.getText().toString();
-        final String neighborhood = neighborhoodEditText.getText().toString();
         final String url = server + "/users.php";
 
         findViewById(R.id.loading).setVisibility(View.VISIBLE);
@@ -181,7 +181,6 @@ public class LoginActivity extends AppCompatActivity {
                 params.put("lastname", lastname);
                 params.put("birth", birth);
                 params.put("video", video);
-                params.put("neighborhood", neighborhood);
 
                 return params;
             }

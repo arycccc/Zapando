@@ -27,14 +27,15 @@ import com.google.android.youtube.player.YouTubePlayerView;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, YouTubePlayer.OnInitializedListener, YouTubePlayer.PlaybackEventListener {
-
+public class MainActivity extends AppCompatActivity //YouTubeBaseActivity
+        implements NavigationView.OnNavigationItemSelectedListener{
+        //YouTubePlayer.OnInitializedListener, YouTubePlayer.PlaybackEventListener {
+/*
         //youtube
         String claveYoutube="AIzaSyATHCsKsfUrrbq-T2B7kmbflycSotmY2DY";
         YouTubePlayerView youTubePlayerView;
         //youtube finish
-/*
+*/
          //login
         final Context context = this;
         final String server = "http://zapando.proyectosort.edu.ar";
@@ -42,25 +43,25 @@ public class MainActivity extends AppCompatActivity
         private SharedPreferences sharedPref;
         public String session;
         //login finish
-*/
+/*
         //ListView
         private ListView lvItems;
         private Adaptador adaptador;
         //ListView finish
-
+*/
         private VideoView videoView;
         private int position = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
+/*
         //youtube
         youTubePlayerView = (YouTubePlayerView) findViewById(R.id.youtube_view);
         youTubePlayerView.initialize(claveYoutube, this);
         //youtube finish
-/*
+*/
         //log in
-        sharedPref = getSharedPreferences("ANDROID_CLIENT", Context.MODE_PRIVATE);
+        sharedPref = getSharedPreferences("ZAPANDO", Context.MODE_PRIVATE);
         session = sharedPref.getString("SESSION", "");
 
         if (session.isEmpty()) {
@@ -68,7 +69,7 @@ public class MainActivity extends AppCompatActivity
             startActivity(intent);
         }
         //login finish
-*/
+
 /*
         //ListView
         lvItems = (ListView) findViewById(R.id.lvItems);
@@ -179,7 +180,7 @@ public class MainActivity extends AppCompatActivity
         videoView.start();
 */
     }
-
+/*
     //youtube
     @Override
     public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean fueRestaurado) {
@@ -239,7 +240,7 @@ public class MainActivity extends AppCompatActivity
 
     }
     //youtube finish
-
+*/
 /*
     //ListView
     private ArrayList<Entidad> GetArrayItems(){
