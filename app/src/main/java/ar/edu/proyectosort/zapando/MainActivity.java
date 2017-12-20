@@ -16,6 +16,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
 import android.widget.Toast;
 import android.widget.VideoView;
 
@@ -24,15 +25,16 @@ import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerView;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener,
-        YouTubePlayer.OnInitializedListener, YouTubePlayer.PlaybackEventListener{
+        implements NavigationView.OnNavigationItemSelectedListener, YouTubePlayer.OnInitializedListener, YouTubePlayer.PlaybackEventListener {
 
         //youtube
         String claveYoutube="AIzaSyATHCsKsfUrrbq-T2B7kmbflycSotmY2DY";
         YouTubePlayerView youTubePlayerView;
         //youtube finish
-
+/*
          //login
         final Context context = this;
         final String server = "http://zapando.proyectosort.edu.ar";
@@ -40,6 +42,11 @@ public class MainActivity extends AppCompatActivity
         private SharedPreferences sharedPref;
         public String session;
         //login finish
+*/
+        //ListView
+        private ListView lvItems;
+        private Adaptador adaptador;
+        //ListView finish
 
         private VideoView videoView;
         private int position = 0;
@@ -48,10 +55,10 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
 
         //youtube
-        youTubePlayerView=(YouTubePlayerView)findViewById(R.id.youtube_view);
+        youTubePlayerView = (YouTubePlayerView) findViewById(R.id.youtube_view);
         youTubePlayerView.initialize(claveYoutube, this);
         //youtube finish
-
+/*
         //log in
         sharedPref = getSharedPreferences("ANDROID_CLIENT", Context.MODE_PRIVATE);
         session = sharedPref.getString("SESSION", "");
@@ -61,7 +68,14 @@ public class MainActivity extends AppCompatActivity
             startActivity(intent);
         }
         //login finish
-
+*/
+/*
+        //ListView
+        lvItems = (ListView) findViewById(R.id.lvItems);
+        adaptador = new Adaptador(this, GetArrayItems());
+        lvItems.setAdapter(adaptador);
+        //ListView finish
+*/
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -224,7 +238,17 @@ public class MainActivity extends AppCompatActivity
     public void onSeekTo(int i) {
 
     }
-
     //youtube finish
 
+/*
+    //ListView
+    private ArrayList<Entidad> GetArrayItems(){
+        ArrayList<Entidad> listItems = new ArrayList<>();
+        listItems.add(new Entidad(R.drawable.boton_rojo, "Ary", "18"));
+        listItems.add(new Entidad(R.drawable.boton_verde, "Marto","18"));
+
+        return listItems;
+    }
+    //ListView finish
+*/
 }

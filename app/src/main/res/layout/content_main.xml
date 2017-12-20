@@ -16,14 +16,7 @@
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="8dp">
 
-        <com.google.android.youtube.player.YouTubePlayerView
-            android:id="@+id/youtube_view"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_weight="1" />
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -32,6 +25,11 @@
             android:orientation="horizontal"
             tools:layout_editor_absoluteX="8dp"
             tools:layout_editor_absoluteY="8dp">
+
+            <com.google.android.youtube.player.YouTubePlayerView
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:id="@+id/youtube_view" />
 
             <Button
                 android:id="@+id/btndislike"
