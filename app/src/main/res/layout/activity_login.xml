@@ -22,8 +22,8 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="154dp"
-        android:layout_height="152dp"
+        android:layout_width="143dp"
+        android:layout_height="165dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -32,7 +32,7 @@
     <EditText
         android:id="@+id/editText2"
         android:layout_width="273dp"
-        android:layout_height="46sp"
+        android:layout_height="35dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:background="@drawable/textbox1"
@@ -41,13 +41,14 @@
         android:inputType="textPersonName"
         android:text="Nombre y Apellido"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="170dp" />
+        tools:layout_editor_absoluteY="185dp" />
 
     <EditText
         android:id="@+id/editText3"
-        android:layout_width="273sp"
-        android:layout_height="46sp"
+        android:layout_width="273dp"
+        android:layout_height="35dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:background="@drawable/textbox1"
@@ -56,13 +57,14 @@
         android:inputType="textPersonName"
         android:text="Mail"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="232dp" />
+        tools:layout_editor_absoluteY="229dp" />
 
     <EditText
         android:id="@+id/editText4"
-        android:layout_width="273sp"
-        android:layout_height="46sp"
+        android:layout_width="273dp"
+        android:layout_height="35dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:background="@drawable/textbox1"
@@ -71,8 +73,9 @@
         android:inputType="textPersonName"
         android:text="URL Video"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="294dp" />
+        tools:layout_editor_absoluteY="276dp" />
 
     <EditText
         android:id="@+id/editText6"
@@ -90,6 +93,24 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.92" />
+        app:layout_constraintVertical_bias="0.978" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="273dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/textbox1"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="Año Nacimiento"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.682" />/>
 
 </android.support.constraint.ConstraintLayout>

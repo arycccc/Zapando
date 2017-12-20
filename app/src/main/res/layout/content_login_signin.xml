@@ -4,28 +4,32 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
 
     <EditText
         android:id="@+id/email"
         android:layout_width="0dp"
-        android:layout_height="64dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="64dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="196dp"
+        android:background="@drawable/manuser"
         android:hint="Correo electrónico"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/password"
         android:layout_width="0dp"
-        android:layout_height="64dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginStart="45dp"
         android:layout_marginTop="16dp"
+        android:background="@drawable/padlock"
         android:hint="Contraseña"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,31 +39,47 @@
 
     <Button
         android:id="@+id/signin"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="161dp"
+        android:layout_height="45dp"
         android:layout_gravity="center"
-        android:layout_marginEnd="64dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="32dp"
-        android:background="@color/colorPrimary"
-        android:onClick="signIn"
-        android:text="Iniciar sesión"
-        android:textColor="@android:color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password" />
-
-    <Button
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="64dp"
         android:layout_marginStart="64dp"
         android:layout_marginTop="8dp"
+        android:background="@drawable/login"
+        android:onClick="signIn"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.731" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="247dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="52dp"
         android:onClick="loadSignUp"
         android:text="Registrarse"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signin" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.935" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="106dp"
+        android:layout_height="129dp"
+        app:srcCompat="@drawable/logozapando"
+        tools:layout_editor_absoluteX="139dp"
+        tools:layout_editor_absoluteY="29dp" />
 
 </android.support.constraint.ConstraintLayout>
