@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/cosoperfil"
     tools:context="ar.edu.proyectosort.zapando.LoginActivity">
-
-    <include android:id="@+id/content_login" layout="@layout/content_login_signin" />
 
     <RelativeLayout
         android:id="@+id/loading"
@@ -20,5 +19,77 @@
             android:layout_height="wrap_content"
             android:indeterminate="true" />
     </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="154dp"
+        android:layout_height="152dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/foto" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="273dp"
+        android:layout_height="46sp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/textbox1"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="Nombre y Apellido"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="170dp" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="273sp"
+        android:layout_height="46sp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/textbox1"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="Mail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="232dp" />
+
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="273sp"
+        android:layout_height="46sp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/textbox1"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="URL Video"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="294dp" />
+
+    <EditText
+        android:id="@+id/editText6"
+        android:layout_width="273sp"
+        android:layout_height="116sp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/textbox1"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="Descripcion"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.92" />
 
 </android.support.constraint.ConstraintLayout>
