@@ -16,27 +16,43 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 import android.widget.VideoView;
 
-public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
-//login
+import com.google.android.youtube.player.YouTubeBaseActivity;
+import com.google.android.youtube.player.YouTubeInitializationResult;
+import com.google.android.youtube.player.YouTubePlayer;
+import com.google.android.youtube.player.YouTubePlayerView;
 
+public class MainActivity extends AppCompatActivity
+        implements NavigationView.OnNavigationItemSelectedListener,
+        YouTubePlayer.OnInitializedListener, YouTubePlayer.PlaybackEventListener{
+
+        //youtube
+        String claveYoutube="AIzaSyATHCsKsfUrrbq-T2B7kmbflycSotmY2DY";
+        YouTubePlayerView youTubePlayerView;
+        //youtube finish
+
+         //login
         final Context context = this;
         final String server = "http://zapando.proyectosort.edu.ar";
 
         private SharedPreferences sharedPref;
         public String session;
-
-//login finish
+        //login finish
 
         private VideoView videoView;
         private int position = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        //log in
 
+        //youtube
+        youTubePlayerView=(YouTubePlayerView)findViewById(R.id.youtube_view);
+        youTubePlayerView.initialize(claveYoutube, this);
+        //youtube finish
+
+        //log in
         sharedPref = getSharedPreferences("ANDROID_CLIENT", Context.MODE_PRIVATE);
         session = sharedPref.getString("SESSION", "");
 
@@ -44,7 +60,6 @@ public class MainActivity extends AppCompatActivity
             Intent intent = new Intent(this, LoginActivity.class);
             startActivity(intent);
         }
-
         //login finish
 
         super.onCreate(savedInstanceState);
@@ -60,13 +75,13 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
+/*
         VideoView videoView = (VideoView) findViewById(R.id.videoView);
         Uri path = Uri.parse("android.resource://ar.edu.proyectosort.zapando/"
                 + R.raw.wildlife);
         videoView.setVideoURI(path);
         videoView.start();
-
+*/
     }
 
     @Override
@@ -129,26 +144,87 @@ public class MainActivity extends AppCompatActivity
         Snackbar snackbar = Snackbar
                 .make(v, "LIKE", Snackbar.LENGTH_LONG);
         snackbar.show();
-
+/*
         VideoView videoView = (VideoView) findViewById(R.id.videoView);
         Uri path = Uri.parse("android.resource://ar.edu.proyectosort.zapando/"
                 + R.raw.notengopito);
         videoView.setVideoURI(path);
         videoView.start();
-
+*/
     }
 
     public void dislike(View v){
         Snackbar snackbar = Snackbar
                 .make(v, "DISLIKE", Snackbar.LENGTH_LONG);
         snackbar.show();
-
+/*
         VideoView videoView = (VideoView) findViewById(R.id.videoView);
         Uri path = Uri.parse("android.resource://ar.edu.proyectosort.zapando/"
                 + R.raw.riend);
         videoView.setVideoURI(path);
         videoView.start();
+*/
+    }
+
+    //youtube
+    @Override
+    public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean fueRestaurado) {
+
+        if (!fueRestaurado){
+            youTubePlayer.cueVideo("azxDhcKYku4"); //https://www.youtube.com/watch?v=azxDhcKYku4
+        }
 
     }
+
+    @Override
+    public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
+
+        if (youTubeInitializationResult.isUserRecoverableError()){
+            youTubeInitializationResult.getErrorDialog(this,1).show();
+        }else{
+            String error = "Error al iniciar Youtube"+youTubeInitializationResult.toString();
+            Toast.makeText(getApplication(),error,Toast.LENGTH_LONG).show();
+        }
+
+    }
+
+    protected void onActivityResult(int requestCode,int resultCode, Intent data){
+
+        if (requestCode==1){
+            getYoutubePlayerProvider().initialize(claveYoutube,this);
+        }
+
+    }
+
+    protected YouTubePlayer.Provider getYoutubePlayerProvider(){
+        return youTubePlayerView;
+    }
+
+    @Override
+    public void onPlaying() {
+
+    }
+
+    @Override
+    public void onPaused() {
+
+    }
+
+    @Override
+    public void onStopped() {
+
+    }
+
+    @Override
+    public void onBuffering(boolean b) {
+
+    }
+
+    @Override
+    public void onSeekTo(int i) {
+
+    }
+
+    //youtube finish
 
 }
