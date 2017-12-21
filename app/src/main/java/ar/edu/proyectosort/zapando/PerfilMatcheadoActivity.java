@@ -11,16 +11,19 @@ import android.widget.Toast;
 
 public class PerfilMatcheadoActivity extends AppCompatActivity {
 
-    TextView texto;
+    TextView nombre,apellido;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfil_matcheado);
 
-        texto = (TextView) findViewById(R.id.firstname);
-    //    String nombre = getIntent().getStringExtra("nombre");
-    //    texto.setText(nombre);
+        nombre = (TextView) findViewById(R.id.firstname);
+        apellido = (TextView) findViewById(R.id.lastname);
+        String nom = getIntent().getStringExtra("nombre");
+        String ape = getIntent().getStringExtra("apellido");
+        apellido.setText(ape);
+        nombre.setText(nom);
 
     }
 

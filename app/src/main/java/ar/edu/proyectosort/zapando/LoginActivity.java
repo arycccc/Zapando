@@ -40,6 +40,7 @@ public class LoginActivity extends AppCompatActivity {
     public EditText lastnameEditText;
     public EditText birthEditText;
     public EditText videoEditText;
+    public EditText descriptionEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -121,6 +122,7 @@ public class LoginActivity extends AppCompatActivity {
                 lastnameEditText = (EditText)findViewById(R.id.lastname);
                 birthEditText = (EditText)findViewById(R.id.birth);
                 videoEditText = (EditText)findViewById(R.id.video);
+                descriptionEditText = (EditText)findViewById(R.id.description);
             }
             @Override
             public void onViewDetachedFromWindow(View v) {
@@ -139,6 +141,7 @@ public class LoginActivity extends AppCompatActivity {
         final String lastname = lastnameEditText.getText().toString();
         final String birth = birthEditText.getText().toString();
         final String video = videoEditText.getText().toString();
+        final String description = descriptionEditText.getText().toString();
         final String url = server + "/users.php";
 
         findViewById(R.id.loading).setVisibility(View.VISIBLE);
@@ -181,6 +184,7 @@ public class LoginActivity extends AppCompatActivity {
                 params.put("lastname", lastname);
                 params.put("birth", birth);
                 params.put("video", video);
+                params.put("description", description);
 
                 return params;
             }

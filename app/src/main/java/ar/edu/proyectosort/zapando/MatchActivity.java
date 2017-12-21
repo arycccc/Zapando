@@ -39,7 +39,8 @@ public class MatchActivity extends AppCompatActivity {
 
     public void pmatch(View v){
         Intent intent = new Intent(this, PerfilMatcheadoActivity.class);
-        //intent.putExtra("nombre",nombre.toString());
+        intent.putExtra("nombre",nombre.toString());
+        intent.putExtra("apellido",apellido.toString());
         startActivity(intent);
     }
 
