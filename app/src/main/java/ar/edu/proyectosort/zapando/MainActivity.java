@@ -47,7 +47,6 @@ public class MainActivity extends AppCompatActivity //YouTubeBaseActivity
         private VideoView videoView;
         private int position = 0;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 /*

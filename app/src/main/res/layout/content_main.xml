@@ -22,6 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="750dp"
             android:layout_weight="1"
+            android:background="@drawable/ic_whatshot"
             android:onClick="link"
             app:srcCompat="@android:color/holo_orange_dark" />
 

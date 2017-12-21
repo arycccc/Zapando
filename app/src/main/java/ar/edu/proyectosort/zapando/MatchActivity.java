@@ -13,6 +13,10 @@ public class MatchActivity extends AppCompatActivity {
     private ListView lvItems;
     private Adaptador adaptador;
 
+    String nombre = "Ary";
+    String apellido ="Degtiar";
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,15 +30,16 @@ public class MatchActivity extends AppCompatActivity {
 
     private ArrayList<Entidad> GetArrayItems(){
         ArrayList<Entidad> listItems = new ArrayList<>();
-        listItems.add(new Entidad(R.drawable.boton_rojo, "Ary","18"));
+        listItems.add(new Entidad(R.drawable.boton_verde, "Ary","18"));
         listItems.add(new Entidad(R.drawable.boton_verde, "Marto","18"));
-        listItems.add(new Entidad(R.drawable.ic_menu_send,"pedo","caqita"));
+        listItems.add(new Entidad(R.drawable.boton_verde,"pedo","caqita"));
 
         return listItems;
     }
 
     public void pmatch(View v){
         Intent intent = new Intent(this, PerfilMatcheadoActivity.class);
+        //intent.putExtra("nombre",nombre.toString());
         startActivity(intent);
     }
 
