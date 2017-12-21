@@ -34,7 +34,7 @@ public class MatchActivity extends AppCompatActivity {
     }
 
     public void pmatch(View v){
-        Intent intent = new Intent(this, PerfilActivity.class);
+        Intent intent = new Intent(this, PerfilMatcheadoActivity.class);
         startActivity(intent);
     }
 
