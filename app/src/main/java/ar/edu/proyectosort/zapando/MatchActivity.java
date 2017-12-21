@@ -1,7 +1,9 @@
 package ar.edu.proyectosort.zapando;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -29,6 +31,11 @@ public class MatchActivity extends AppCompatActivity {
         listItems.add(new Entidad(R.drawable.ic_menu_send,"pedo","caqita"));
 
         return listItems;
+    }
+
+    public void pmatch(View v){
+        Intent intent = new Intent(this, PerfilActivity.class);
+        startActivity(intent);
     }
 
 }

@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity //YouTubeBaseActivity
         private VideoView videoView;
         private int position = 0;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 /*
@@ -136,6 +137,12 @@ public class MainActivity extends AppCompatActivity //YouTubeBaseActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void link(View v) {
+        Uri uri = Uri.parse("https://www.youtube.com/watch?v=_d2-Cj8ayGI");
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
     }
 
     public void perfil(View v){

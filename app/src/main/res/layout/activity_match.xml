@@ -7,22 +7,10 @@
     android:background="@color/colorPrimary"
     tools:context="ar.edu.proyectosort.zapando.MatchActivity">
 
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
-
             <ListView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/lvItems"/>
-
-        </LinearLayout>
-    </ScrollView>
+                android:id="@+id/lvItems"
+                android:layout_marginTop="5dp"/>
 
 </android.support.constraint.ConstraintLayout>

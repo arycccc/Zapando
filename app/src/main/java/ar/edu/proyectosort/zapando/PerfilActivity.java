@@ -2,6 +2,7 @@ package ar.edu.proyectosort.zapando;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.EditText;
 
 public class PerfilActivity extends AppCompatActivity {
 
@@ -9,5 +10,7 @@ public class PerfilActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perfil);
+
     }
+
 }
