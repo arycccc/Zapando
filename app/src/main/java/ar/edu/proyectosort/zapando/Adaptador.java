@@ -10,23 +10,23 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class Adaptador extends BaseAdapter{
+public class Adaptador extends BaseAdapter {
     private Context context;
-    private ArrayList<Entidad> listItens;
+    private ArrayList<Entidad> listItems;
 
-    public Adaptador(Context context, ArrayList<Entidad> listItens){
+    public Adaptador(Context context, ArrayList<Entidad> listItems){
         this.context = context;
-        this.listItens = listItens;
+        this.listItems = listItems;
     }
 
     @Override
     public int getCount() {
-        return listItens.size();
+        return listItems.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return listItens.get(position);
+        return listItems.get(position);
     }
 
     @Override
@@ -38,14 +38,14 @@ public class Adaptador extends BaseAdapter{
     public View getView(int position, View convertView, ViewGroup parent) {
         Entidad Item = (Entidad) getItem(position);
 
-        convertView = LayoutInflater.from(context).inflate(R.layout.activity_match,null);
+        convertView = LayoutInflater.from(context).inflate(R.layout.item,null);
         ImageView imgFoto = (ImageView) convertView.findViewById(R.id.imgFoto);
         TextView tvTitulo = (TextView) convertView.findViewById(R.id.tvTitulo);
-        TextView tvcontenido = (TextView) convertView.findViewById(R.id.tvContenido);
+        TextView tvContenido = (TextView) convertView.findViewById(R.id.tvContenido);
 
         imgFoto.setImageResource(Item.getImgFoto());
         tvTitulo.setText(Item.getTitulo());
-        tvcontenido.setText(Item.getContenido());
+        tvContenido.setText(Item.getContenido());
 
         return convertView;
     }

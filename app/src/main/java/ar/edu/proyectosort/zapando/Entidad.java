@@ -1,7 +1,7 @@
 package ar.edu.proyectosort.zapando;
 
 /**
- * Created by adm on 20/12/2017.
+ * Created by adm on 21/12/2017.
  */
 
 public class Entidad {

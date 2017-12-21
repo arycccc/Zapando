@@ -43,12 +43,7 @@ public class MainActivity extends AppCompatActivity //YouTubeBaseActivity
         private SharedPreferences sharedPref;
         public String session;
         //login finish
-/*
-        //ListView
-        private ListView lvItems;
-        private Adaptador adaptador;
-        //ListView finish
-*/
+
         private VideoView videoView;
         private int position = 0;
 
@@ -70,13 +65,6 @@ public class MainActivity extends AppCompatActivity //YouTubeBaseActivity
         }
         //login finish
 
-/*
-        //ListView
-        lvItems = (ListView) findViewById(R.id.lvItems);
-        adaptador = new Adaptador(this, GetArrayItems());
-        lvItems.setAdapter(adaptador);
-        //ListView finish
-*/
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -241,15 +229,5 @@ public class MainActivity extends AppCompatActivity //YouTubeBaseActivity
     }
     //youtube finish
 */
-/*
-    //ListView
-    private ArrayList<Entidad> GetArrayItems(){
-        ArrayList<Entidad> listItems = new ArrayList<>();
-        listItems.add(new Entidad(R.drawable.boton_rojo, "Ary", "18"));
-        listItems.add(new Entidad(R.drawable.boton_verde, "Marto","18"));
 
-        return listItems;
-    }
-    //ListView finish
-*/
 }
