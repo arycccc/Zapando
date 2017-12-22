@@ -33,6 +33,7 @@ public class MatchActivity extends AppCompatActivity {
     private ArrayList<Entidad> GetArrayItems(){
         ArrayList<Entidad> listItems = new ArrayList<>();
         listItems.add(new Entidad(R.drawable.boton_verde, nombre,apellido));
+        listItems.add(new Entidad(R.drawable.boton_verde, "Glllik","HOLAAAAA"));
 
         return listItems;
     }
