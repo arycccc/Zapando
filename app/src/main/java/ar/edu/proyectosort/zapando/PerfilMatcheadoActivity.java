@@ -12,6 +12,7 @@ import android.widget.Toast;
 public class PerfilMatcheadoActivity extends AppCompatActivity {
 
     TextView nombre,apellido;
+    String video = "https://www.youtube.com/watch?v=lT8ep_YGcvA";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,10 +28,10 @@ public class PerfilMatcheadoActivity extends AppCompatActivity {
 
     }
 
-
     public void link(View v) {
-        Uri uri = Uri.parse("https://www.youtube.com/watch?v=lT8ep_YGcvA");
+        Uri uri = Uri.parse(video);
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);
     }
+
 }

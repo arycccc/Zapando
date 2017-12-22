@@ -8,6 +8,8 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
+import static android.support.v7.widget.AppCompatDrawableManager.get;
+
 public class MatchActivity extends AppCompatActivity {
 
     private ListView lvItems;
@@ -30,9 +32,7 @@ public class MatchActivity extends AppCompatActivity {
 
     private ArrayList<Entidad> GetArrayItems(){
         ArrayList<Entidad> listItems = new ArrayList<>();
-        listItems.add(new Entidad(R.drawable.boton_verde, "Ary","18"));
-        listItems.add(new Entidad(R.drawable.boton_verde, "Marto","18"));
-        listItems.add(new Entidad(R.drawable.boton_verde,"pedo","caqita"));
+        listItems.add(new Entidad(R.drawable.boton_verde, nombre,apellido));
 
         return listItems;
     }

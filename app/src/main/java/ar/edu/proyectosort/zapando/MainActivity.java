@@ -17,6 +17,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
 
@@ -47,8 +48,12 @@ public class MainActivity extends AppCompatActivity //YouTubeBaseActivity
         private VideoView videoView;
         private int position = 0;
 
+        String video = "https://www.youtube.com/watch?v=_d2-Cj8ayGI";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
 /*
         //youtube
         youTubePlayerView = (YouTubePlayerView) findViewById(R.id.youtube_view);
@@ -139,7 +144,7 @@ public class MainActivity extends AppCompatActivity //YouTubeBaseActivity
     }
 
     public void link(View v) {
-        Uri uri = Uri.parse("https://www.youtube.com/watch?v=_d2-Cj8ayGI");
+        Uri uri = Uri.parse(video);
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);
     }
