@@ -20,10 +20,15 @@ public class PerfilActivity extends AppCompatActivity {
         descrip = (TextView) findViewById(R.id.description);
         edad = (TextView) findViewById(R.id.birth);
 
-        nom.setText(nombre);
-        ape.setText(apellido);
+        nombre = "";
+        apellido = "";
+        descripcion = "";
+        fecha = "";
+
+        nom.setText("Nombre: " + nombre);
+        ape.setText("Apellido: " + apellido);
         descrip.setText(descripcion);
-        edad.setText(fecha);
+        edad.setText("Edad: " + fecha);
 
     }
 
